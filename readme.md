@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_organization/repo_name">
-    <img src="images/cf-logo-white.png"alt="Logo">
+    <img src="images/cf-logo-reg.png"alt="Logo">
   </a>
 
 <h3 align="center">Terraform Module for Patch Manager</h3>
