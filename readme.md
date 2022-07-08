@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_organization/repo_name">
+  <a href="https://www.coalfire.com">
     <img src="images/cf-logo-reg.png"alt="Logo">
   </a>
 
@@ -12,7 +12,7 @@
   <p align="center">
     Automate your baselines, maintanence windows, and tasks for your chosen operating system.
     <br />
-    <a href="https://github.com/github_organization/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="#related-documentation"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_organization/repo_name">View Demo</a>
@@ -61,10 +61,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 This project allows for a quick creation of maintanence windows for SSM patching. 
-
-* Click [here](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html) to read more on patching with SSM
-
-* Click [here](https://coalfire.atlassian.net/wiki/spaces/CEHOME/pages/1840087095/Patching+Windows+Instances+with+AWS+Systems+Manager) to read Dave Stroms SSM patching guide
 
 ### High Level Diagram
 
@@ -342,6 +338,15 @@ For more examples, please refer to the [Demo](PLACEHOLDER)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+<!-- RELATED DOCUMENTATION -->
+## Related Documentation
+
+* Click [here](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html) to read more on patching with SSM
+
+* Click [here](https://coalfire.atlassian.net/wiki/spaces/CEHOME/pages/1840087095/Patching+Windows+Instances+with+AWS+Systems+Manager) to read Dave Stroms SSM patching guide
+
+* Click [here](https://www.youtube.com/watch?v=ABtwRb9BFY4) to see an AWS demonstration of patching with Systems Manager
 
 <!-- ROADMAP -->
 ## Roadmap
