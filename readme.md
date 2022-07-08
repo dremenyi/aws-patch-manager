@@ -331,87 +331,17 @@ If you choose to ONLY use the required locals, then the module will assume that 
 
 ### Configure your terraform manifest
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-#### Complete example configuration for Providers.tf 
-
+TO SEE EXAMPLES ON HOW TO CONFIGURE YOUR OWN TERRAFORM MANIFEST USING THESE MODULES, PLEASE SEE EXAMPLES IN:
 ```sh
-terraform {
-  required_version = "~> 1.2"
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.20"
-    }
-
-
-  }
-
-
-}
-
-provider "aws" {
-  region = "us-east-1"
-  # Current expectation is to use enviornment variables
-}
-```
-#### Complete example configuration for module (REDHAT ENTERPRISE LINUX):
-
-```sh
-locals {
-    compliance_level = "high"
-    env = "dev"
-    operating_system = "${module.rhel_baseline.operating_system}"
-    scan_maintenance_window_schedule = "cron(0 7/2 ? * * *)"
-    patch_groups = ["rhel"]
-    
-    tags = {
-        terraform = "true"
-        owner     = "coalfire"
-        team      = "sre"
-    }
-
-}
-
-module "rhel_baseline" {
-    source = "../../../../patching/modules/baselines/linux/rhel"
-    env = local.env
-    compliance_level = upper(local.compliance_level)
-} 
-
-module "rhel_maintenance_window" {
-    source = "../../../../patching/modules/maintanence-windows"
-    operating_system = local.operating_system
-    env = local.env
-    role_name = "${module.rhel_baseline.patch_baseline_label}-${local.env}-${local.operating_system}-patching-role"
-    service_role_arn = "${module.rhel_maintenance_window.service_role_arn}"
-    scan_maintenance_window_schedule = local.scan_maintenance_window_schedule
-    patch_groups = local.patch_groups
-    tags = merge(local.tags, {operating_system = local.operating_system})
-    enable_mode_scan = true
-}
+aws-patch-manager/examples/
 ```
 
-#### Complete example configuration for module (WINDOWS SERVER 2016 and 2012R2):
 
-#### Complete example configuration for outputs.tf:
-
-```sh
-output "operating_system" {
-  description = "The operating system"
-  value = module.rhel_baseline.operating_system
-}
-
-output "tags" {
-  value = module.rhel_maintenance_window.tags
-}
-```
 
 For more examples, please refer to the [Demo](PLACEHOLDER)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
