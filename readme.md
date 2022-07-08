@@ -61,7 +61,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="images/aws_systems_manager_logo.png" alt="systems manager logo" title="systems manager logo" align="center" />
+<img src="images/hld.jpeg" alt="systems manager logo" title="systems manager logo" align="center" />
 
 <br>
 
