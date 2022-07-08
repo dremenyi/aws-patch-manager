@@ -60,18 +60,17 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-<img src="images/hld.jpeg" alt="systems manager logo" title="systems manager logo" align="center" />
-
-<br>
-
 This project allows for a quick creation of maintanence windows for SSM patching. 
 
 * Click [here](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html) to read more on patching with SSM
 
 * Click [here](https://coalfire.atlassian.net/wiki/spaces/CEHOME/pages/1840087095/Patching+Windows+Instances+with+AWS+Systems+Manager) to read Dave Stroms SSM patching guide
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`,
+### High Level Diagram
+
+<img src="images/hld.jpeg" alt="systems manager logo" title="systems manager logo" align="center" />
+
+<br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
