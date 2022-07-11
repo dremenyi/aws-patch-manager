@@ -3,8 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://www.coalfire.com">
-    <img src="images/cf-logo-reg.png"alt="Logo">
+  <a href="">
   </a>
 
 <h3 align="center">Terraform Module for Patch Manager</h3>
@@ -341,9 +340,7 @@ For more examples, please refer to the [Demo](PLACEHOLDER)
 
 <!-- RELATED DOCUMENTATION -->
 ## Related Documentation
-* Click [here](https://coalfire.atlassian.net/wiki/spaces/~62b1e9325479e75d631c2a97/pages/1843625991/SSM+Patch+Manager+Automation) to review our internal Discovery and Design document
 * Click [here](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html) to read more on patching with SSM
-* Click [here](https://coalfire.atlassian.net/wiki/spaces/CEHOME/pages/1840087095/Patching+Windows+Instances+with+AWS+Systems+Manager) to read Dave Stroms SSM patching guide
 * Click [here](https://www.youtube.com/watch?v=ABtwRb9BFY4) to see an AWS demonstration of patching with Systems Manager
 * Click [here](https://learn.hashicorp.com/tutorials/terraform/install-cli#install-terraform) to learn how to install Terraform
 
@@ -372,8 +369,6 @@ Distributed under the GNU License. Review the [LICENSE.txt](LICENSE) for more in
 
 <!-- CONTACT -->
 ## Contact
-
-* Dakota Remenyi - dakota.remenyi@coalfire.com
-* Bradley Taylor - bradley.taylor@coalfire.com
+remenyidakota@gmail.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
