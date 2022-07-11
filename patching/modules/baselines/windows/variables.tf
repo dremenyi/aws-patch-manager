@@ -82,3 +82,7 @@ variable "win_patch_group" {
   type = list(string)
   default = []
 }
+
+variable "patch_group_name" {
+  description = "name of your patch group"
+}

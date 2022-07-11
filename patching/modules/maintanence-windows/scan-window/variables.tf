@@ -22,7 +22,6 @@ variable "patch_baseline_label" {
 
 variable "role_name" {
   description = "Role name for the maintenance window."
-  default = "cf-ssm-pbl-"
 }
 
 # ===========================================================
@@ -78,13 +77,6 @@ variable "notification_type" {
 variable "notification_arn" {
   description = "The SNS ARN to use for notification"
   type        = string
-  default     = ""
-}
-
-variable "role_arn_for_notification" {
-  description = "Role Used by SSM Service Role to trigger notification"
-  type        = string
-  default     = ""
 }
 
 # ===========================================================
@@ -96,7 +88,7 @@ variable "enable_mode_scan" {
   default     = false
 }
 
-variable "patch_groups" {
+variable "scan_patch_groups" {
   description = "The list of scan patching groups, one target will be created per entry in this list. Update default value only if you know what you do"
   type        = list(string)
 }
@@ -119,58 +111,20 @@ variable "task_scan_priority" {
   default     = 1
 }
 
-variable "enable_notification_scan" {
+variable "scan_only" {
   description = "Enable/Disable the SNS notification for scan"
   type        = bool
   default     = false
 }
 
-variable "scan_maintenance_windows_targets" {
-  description = "The map of tags for targetting which EC2 instances will be scaned"
-  type = list(object({
-    key : string
-    values : list(string)
-    }
-    )
-  )
-  default = []
-}
-
-# ===========================================================
-# Maintenance Windows for Install - Variables
-# ===========================================================
-variable "install_patch_groups" {
-  description = "The list of install patching groups, one target will be created per entry in this list. Update default value only if you know what you do"
-  type        = list(string)
-  default     = ["TOPATCH"]
-}
-
-variable "install_maintenance_window_schedule" {
-  description = "The schedule of the install Maintenance Window in the form of a cron or rate expression"
-  type        = string
-  default     = "cron(0 0 21 ? * WED *)"
-}
-
-variable "s3_bucket_prefix_install_logs" {
-  description = "The directories where the logs of scan will be stored"
-  type        = string
-  default     = "install"
-}
-
-variable "task_install_priority" {
-  description = "Priority assigned to the install task. 1 is the highest priority. Default 1"
-  type        = number
-  default     = 1
-}
-
-variable "enable_notification_install" {
+variable "enable_notification" {
   description = "Enable/Disable the SNS notification for install patchs"
   type        = bool
   default     = true
 }
 
-variable "install_maintenance_windows_targets" {
-  description = "The map of tags for targetting which EC2 instances will be patched"
+variable "scan_maintenance_windows_targets" {
+  description = "The map of tags for targetting which EC2 instances will be scaned"
   type = list(object({
     key : string
     values : list(string)

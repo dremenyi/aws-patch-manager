@@ -30,12 +30,12 @@ resource "aws_ssm_patch_baseline" "baseline" {
       }
     }
   }
-  tags = merge(var.tags, { Name = format("%s-%s-%s", var.patch_baseline_label, var.env, lower(local.operating_system)) })
+  #tags = merge(var.tags, { Name = format("%s-%s-%s", var.patch_baseline_label, var.env, lower(local.operating_system)) })
 }
 
 resource "aws_ssm_patch_group" "patchgroup" {
     baseline_id = aws_ssm_patch_baseline.baseline.id
-    patch_group = format("%s-%s-%s", lower(local.operating_system), var.env, "patchgroup")
+    patch_group = var.patch_group_name
 }
 
 /*
